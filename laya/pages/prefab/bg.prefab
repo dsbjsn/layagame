@@ -1,0 +1,1 @@
+{"type":"Sprite","searchKey":"Sprite,bg","props":{"y":0,"x":0,"name":"bg","alpha":0.8,"runtime":"runtimes/DialogBgRunTime.ts","preset":"laya/pages/prefab/bg.prefab","presetID":1,"isPresetRoot":true},"nodeParent":2,"label":"bg","isOpen":true,"isDirectory":false,"isAniNode":true,"hasChild":false,"compId":7,"child":[],"x":15}

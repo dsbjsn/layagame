@@ -1,0 +1,12 @@
+{
+  "code": "import SingtonClass from \"./SingtonClass\";\r\nimport TipsUtil from \"./TipsUtil\";\r\nimport GameHttp from \"../data/GameHttp\";\r\nimport AldUtil from \"./AldUtil\";\r\nimport GamePlatform from \"../adapter/GamePlatform\";\r\nexport default class LeadOutUtil extends SingtonClass {\r\n    static leadOut(gameInfo, dc_pois) {\r\n        AldUtil.upload(dc_pois);\r\n        if (Laya.Browser.onWeiXin || Laya.Browser.onQQMiniGame) {\r\n            GameHttp.Instance.leadOut(gameInfo.id);\r\n            GamePlatform.platform.navigateToMiniProgram({\r\n                appId: gameInfo.appid,\r\n                path: gameInfo.url,\r\n                extraData: {\r\n                    foo: 'bar'\r\n                },\r\n                envVersion: 'release',\r\n                success(res) {\r\n                    console.log('更多游戏打开成功');\r\n                    GameHttp.Instance.leadOutSuccess(gameInfo.id);\r\n                }\r\n            });\r\n        }\r\n        else {\r\n            TipsUtil.msg(\"仅在微信中使用\");\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/utils/SingtonClass.ts",
+    "E:/LayaModle/melee/src/utils/TipsUtil.ts",
+    "E:/LayaModle/melee/src/utils/LocalStorageUtil.ts",
+    "E:/LayaModle/melee/src/utils/WxADUtil.ts",
+    "E:/LayaModle/melee/src/data/GameHttp.ts",
+    "E:/LayaModle/melee/src/utils/AldUtil.ts",
+    "E:/LayaModle/melee/src/adapter/GamePlatform.ts"
+  ]
+}

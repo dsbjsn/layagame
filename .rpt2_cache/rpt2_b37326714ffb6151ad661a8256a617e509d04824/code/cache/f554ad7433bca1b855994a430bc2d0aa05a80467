@@ -1,0 +1,9 @@
+{
+  "code": "import BaseDialogManage from \"./BaseDialogManage\";\r\nimport StaticData from \"../../data/StaticData\";\r\nimport WxADUtil from \"../../utils/WxADUtil\";\r\nimport CoinModle from \"../../modle/CoinModle\";\r\nexport default class FLBoxDialogManage extends BaseDialogManage {\r\n    onAwake() {\r\n        let bg = this.owner.getChildByName(\"bg\");\r\n        bg.graphics.clear();\r\n        bg.graphics.drawRect(0, 0, StaticData.gameWidth, StaticData.gameHeight, \"#000000\");\r\n        bg.alpha = 0.8;\r\n    }\r\n    yesAction() {\r\n        WxADUtil.adOrShare({\r\n            success: () => {\r\n                CoinModle.addCoin(100);\r\n            }\r\n        });\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/manages/dialogManage/BaseDialogManage.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts",
+    "E:/LayaModle/melee/src/utils/WxADUtil.ts",
+    "E:/LayaModle/melee/src/modle/CoinModle.ts"
+  ]
+}

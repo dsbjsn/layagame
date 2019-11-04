@@ -1,0 +1,4 @@
+{
+  "code": "export default class SingtonClass {\r\n    constructor() { }\r\n    static Instance(...param) {\r\n        let Class = this;\r\n        if (!Class._instance) {\r\n            Class._instance = new Class(...param);\r\n        }\r\n        return Class._instance;\r\n    }\r\n}\r\n",
+  "references": []
+}

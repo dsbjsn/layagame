@@ -1,0 +1,25 @@
+{
+    "x":0,
+    "type":"Label",
+    "selectedBox":8,
+    "searchKey":"Label,no",
+    "props":{"y":0,"x":0,"width":190,"valign":"middle","underline":true,"text":"放弃奖励","presetID":1,"preset":"laya/pages/prefab/no.prefab","name":"no","isPresetRoot":true,"height":51,"fontSize":38,"font":"SimHei","color":"#ffffff","bold":true,"alpha":1,"align":"center"},
+    "nodeParent":-1,
+    "maxID":9,
+    "label":"no",
+    "isDirectory":false,
+    "isAniNode":true,
+    "hasChild":false,
+    "compId":8,
+    "child":[
+        ],
+    "animations":[
+        {
+            "nodes":[
+                ],
+            "name":"ani1",
+            "id":1,
+            "frameRate":24,
+            "action":0
+        }]
+}

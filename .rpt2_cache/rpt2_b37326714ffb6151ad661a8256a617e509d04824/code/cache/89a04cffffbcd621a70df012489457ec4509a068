@@ -1,0 +1,14 @@
+{
+  "code": "import BaseDialogManage from \"./BaseDialogManage\";\r\nimport WxADUtil from \"../../utils/WxADUtil\";\r\nimport ConfigData from \"../../config/ConfigData\";\r\nimport AldUtil from \"../../utils/AldUtil\";\r\nimport StaticData from \"../../data/StaticData\";\r\nimport GameManage from \"../../manages/GameManage\";\r\nexport default class GameOverDialogRunTime extends BaseDialogManage {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.hadShare = false;\r\n    }\r\n    findView() {\r\n        this.stationLabel = this.contentSpr.getChildByName(\"stationLabel\");\r\n        this.rangeLabel = this.contentSpr.getChildByName(\"rangeLabel\");\r\n    }\r\n    ;\r\n    initView() {\r\n        this.stationLabel.text = \"- 下一站 \" + StaticData.getLevelData(StaticData.level).stationInfo.name + \" -\";\r\n    }\r\n    adapterWindow() {\r\n        super.adapterWindow();\r\n        this.rangeLabel.y += 167 * StaticData.heightOffsetScale;\r\n        this.stationLabel.y += 167 * StaticData.heightOffsetScale;\r\n        this.midleLeadOutSpr.setAldPois(\"\\u590D\\u6D3B\\u9875-\\u5BFC\\u51FA\");\r\n    }\r\n    yesAction() {\r\n        AldUtil.upload(\"\\u590D\\u6D3B\\u9875-\\u590D\\u6D3B\");\r\n        WxADUtil.adOrShare({\r\n            success: () => {\r\n                this.reLiveAction();\r\n            }, fail: () => {\r\n                this.noAction();\r\n            }\r\n        });\r\n    }\r\n    noAction() {\r\n        AldUtil.upload(\"\\u590D\\u6D3B\\u9875-\\u4E0D\\u590D\\u6D3B\");\r\n        Laya.Dialog.open(ConfigData.GetCoinTimesDialog);\r\n    }\r\n    reLiveAction() {\r\n        WxADUtil.hideBannerAd();\r\n        GameManage.manageOwner.reLive();\r\n        this.owner.close();\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/manages/dialogManage/BaseDialogManage.ts",
+    "E:/LayaModle/melee/src/utils/WxADUtil.ts",
+    "E:/LayaModle/melee/src/config/ConfigData.ts",
+    "E:/LayaModle/melee/src/runtimes/LeadOutGridRunTime.ts",
+    "E:/LayaModle/melee/src/utils/AldUtil.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts",
+    "E:/LayaModle/melee/src/utils/LeadOutUtil.ts",
+    "E:/LayaModle/melee/src/manages/GameManage.ts",
+    "E:/LayaModle/melee/src/modle/CoinModle.ts"
+  ]
+}

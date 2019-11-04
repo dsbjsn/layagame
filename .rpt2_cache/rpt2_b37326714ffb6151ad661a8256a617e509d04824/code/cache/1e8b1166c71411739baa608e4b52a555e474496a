@@ -1,0 +1,9 @@
+{
+  "code": "import ConfigData from \"../../config/ConfigData\";\r\nimport BaseDialogManage from \"../dialogManage/BaseDialogManage\";\r\nimport StaticData from \"../../data/StaticData\";\r\nexport default class OthersGameDialog extends BaseDialogManage {\r\n    findView() {\r\n        this.close = this.contentSpr.getChildByName(\"_close\");\r\n        this.leadOut = this.contentSpr.getChildByName(\"listSpr2\");\r\n        this.bgSpr = this.contentSpr.getChildByName(\"bgSpr\");\r\n    }\r\n    initView() {\r\n        this.close.on(Laya.Event.CLICK, this, () => {\r\n            this.owner.close();\r\n            Laya.Dialog.open(ConfigData.StartGameDialog);\r\n        });\r\n        this.leadOut.setAldPois(\"\\u5176\\u4ED6\\u6E38\\u620F\\u9875-\\u5BFC\\u51FA\");\r\n    }\r\n    adapterWindow() {\r\n        super.adapterWindow();\r\n        this.close.y += StaticData.offY;\r\n        this.leadOut.y += StaticData.offY;\r\n        this.bgSpr.y += StaticData.offY;\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/config/ConfigData.ts",
+    "E:/LayaModle/melee/src/runtimes/LeadOutGrid2RunTime.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/BaseDialogManage.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts"
+  ]
+}

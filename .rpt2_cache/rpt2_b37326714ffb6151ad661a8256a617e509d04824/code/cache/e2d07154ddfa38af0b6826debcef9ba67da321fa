@@ -1,0 +1,17 @@
+{
+  "code": "import StaticData from \"../data/StaticData\";\r\nimport StartGameInitModle from \"../modle/StartGameInitModle\";\r\nimport AldUtil from \"../utils/AldUtil\";\r\nexport default class Loading extends Laya.Script {\r\n    onEnable() {\r\n        AldUtil.upload(\"\\u52A0\\u8F7D\\u9875\");\r\n        this.box = this.owner.getChildByName(\"box\");\r\n        this.loadingLb = this.box.getChildByName(\"loadingLb\");\r\n        if (!StaticData.isIphoneX) {\r\n            this.box.y -= StaticData.offY;\r\n        }\r\n        else {\r\n            this.box.y = 0;\r\n        }\r\n    }\r\n    onStart() {\r\n        StartGameInitModle.initData();\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/data/GameHttp.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts",
+    "E:/LayaModle/melee/src/utils/SoundUtil.ts",
+    "E:/LayaModle/melee/src/config/ConfigData.ts",
+    "E:/LayaModle/melee/src/modle/SkinModle.ts",
+    "E:/LayaModle/melee/src/utils/LocalStorageUtil.ts",
+    "E:/LayaModle/melee/src/modle/CoinModle.ts",
+    "E:/LayaModle/melee/src/GameConfig.ts",
+    "E:/LayaModle/melee/src/modle/SignModle.ts",
+    "E:/LayaModle/melee/src/data/UserData.ts",
+    "E:/LayaModle/melee/src/modle/StartGameInitModle.ts",
+    "E:/LayaModle/melee/src/utils/AldUtil.ts"
+  ]
+}

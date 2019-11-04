@@ -1,0 +1,6 @@
+{
+  "code": "import GamePlatform from \"../adapter/GamePlatform\";\r\nexport default class Api {\r\n    static getRootUrl() {\r\n        if (GamePlatform.platformName == GamePlatform.QQ) {\r\n            return \"https://qq.xyxapi.com/home/lxdd\";\r\n        }\r\n        else {\r\n            return \"https://lxdd.xyxapi.com\";\r\n        }\r\n    }\r\n}\r\nApi.misleadUrl = Api.getRootUrl() + \"/index.php?act=user\";\r\nApi.loginUrl = Api.getRootUrl() + \"/index.php?act=userinfo\";\r\nApi.gameListUrl = Api.getRootUrl() + \"/index.php?act=gamelist\";\r\nApi.startGameUrl = Api.getRootUrl() + \"/index.php?act=index\";\r\nApi.endGameUrl = Api.getRootUrl() + \"/index.php?act=end\";\r\nApi.leadOutUrl = Api.getRootUrl() + \"/index.php?act=game\";\r\nApi.leadOutSuccessUrl = Api.getRootUrl() + \"/index.php?act=cgame\";\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/adapter/GamePlatform.ts"
+  ]
+}

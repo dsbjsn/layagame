@@ -1,0 +1,6 @@
+{
+  "code": "import SingtonClass from \"../utils/SingtonClass\";\r\nexport default class BaseModle extends SingtonClass {\r\n    constructor() { super(); }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/utils/SingtonClass.ts"
+  ]
+}

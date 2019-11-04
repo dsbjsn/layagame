@@ -1,0 +1,130 @@
+{
+    "carSkin": [
+        {
+            "id": "1",
+            "skinName": "小蓝车",
+            "skinModle": 1,
+            "coin": 0,
+            "getWay": "coin"
+        },
+        {
+            "id": "2",
+            "skinName": "迷彩车",
+            "skinModle": 1,
+            "coin": 800,
+            "getWay": "coin"
+        },
+        {
+             "id": "3",
+            "skinName": "粉色皮卡",
+            "skinModle": 2,
+            "coin": 1000,
+            "getWay": "coin"
+        },
+        {
+            "id": "4",
+            "skinName": "红色皮卡",
+            "skinModle": 2,
+            "coin": 1500,
+            "getWay": "coin"
+        },
+        {
+            "id": "5",
+            "skinName": "紫薯车",
+            "skinModle": 3,
+            "coin": 2000,
+            "getWay": "coin"
+        },
+        {
+            "id": "6",
+            "skinName": "木板车",
+            "skinModle": 3,
+            "coin": 2000,
+            "getWay": "coin"
+        },
+        {
+            "id": "7",
+            "skinName": "黄金木板车",
+            "skinModle": 3,
+            "coin": 2500,
+            "getWay": "coin"
+        },
+        {
+            "id": "8",
+            "skinName": "爱心踏板车",
+            "skinModle": 4,
+            "coin": 3000,
+            "getWay": "sign"
+        },
+        {
+            "id": "10",
+            "skinName": "草绿轮滑",
+            "skinModle": 5,
+            "coin": 3500,
+            "getWay": "coin"
+        },
+        {
+            "id": "11",
+            "skinName": "炫彩轮滑",
+            "skinModle": 5,
+            "coin": 5000,
+            "getWay": "coin"
+        }
+    ],
+    "eggSkin": [
+        {
+            "id": "1",
+            "skinName": "鸡蛋",
+            "skinModle": 1,
+            "coin": 0
+        },
+        {
+            "id": "2",
+            "skinName": "粉蛋",
+            "skinModle": 1,
+            "coin": 800
+        },
+        {
+            "id": "3",
+            "skinName": "星星蛋",
+            "skinModle": 2,
+            "coin": 1000
+        },
+        {
+            "id": "4",
+            "skinName": "小绿蛋",
+            "skinModle": 2,
+            "coin": 1500
+        },
+        {
+            "id": "5",
+            "skinName": "冰蛋",
+            "skinModle": 3,
+            "coin": 2000
+        },
+        {
+            "id": "6",
+            "skinName": "迷彩蛋",
+            "skinModle": 3,
+            "coin": 2000
+        },
+        {
+            "id": "7",
+            "skinName": "波纹蛋",
+            "skinModle": 3,
+            "coin": 2000
+        },
+        {
+            "id": "8",
+            "skinName": "花花蛋",
+            "skinModle": 4,
+            "coin": 2000
+        },
+        {
+            "id": "9",
+            "skinName": "心蛋",
+            "skinModle": 4,
+            "coin": 2000
+        }
+    ]
+}

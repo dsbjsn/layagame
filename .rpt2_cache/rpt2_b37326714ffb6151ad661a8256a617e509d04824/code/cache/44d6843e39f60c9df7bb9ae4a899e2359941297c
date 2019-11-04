@@ -1,0 +1,13 @@
+{
+  "code": "import BaseModle from \"./BaseModle\";\r\nimport LocalStorageUtil from \"../utils/LocalStorageUtil\";\r\nimport TipsUtil from \"../utils/TipsUtil\";\r\nimport SoundUtil from \"../utils/SoundUtil\";\r\nimport BaseDialogManage from \"../manages/dialogManage/BaseDialogManage\";\r\nexport default class CoinModle extends BaseModle {\r\n    static init(debugNum) {\r\n        if (debugNum) {\r\n            this.coin = debugNum;\r\n        }\r\n        else {\r\n            this.coin = LocalStorageUtil.getNumber(this.COIN);\r\n        }\r\n    }\r\n    static doubleCoin(isDouble) {\r\n        this.isDoubleCoin = isDouble;\r\n    }\r\n    static addCoin(addNum) {\r\n        this.coin += addNum;\r\n        LocalStorageUtil.add(this.COIN, this.coin);\r\n        TipsUtil.msg(\"获得\" + addNum + \"金币\");\r\n        BaseDialogManage.getInstance().refreshCoin();\r\n        SoundUtil.playCoin();\r\n    }\r\n    static reduceCoin(reduceNum) {\r\n        if (this.coin < reduceNum) {\r\n            TipsUtil.msg(\"金币不足\");\r\n        }\r\n        else {\r\n            this.coin -= reduceNum;\r\n            LocalStorageUtil.add(this.COIN, this.coin);\r\n            if (BaseDialogManage.getInstance() != null) {\r\n                BaseDialogManage.getInstance().refreshCoin();\r\n            }\r\n        }\r\n    }\r\n    static getCoin() {\r\n        return this.coin;\r\n    }\r\n}\r\nCoinModle.isDoubleCoin = false;\r\nCoinModle.COIN = \"COIN\";\r\nCoinModle.coin = 0;\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/modle/BaseModle.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts",
+    "E:/LayaModle/melee/src/utils/LocalStorageUtil.ts",
+    "E:/LayaModle/melee/src/utils/TipsUtil.ts",
+    "E:/LayaModle/melee/src/utils/SoundUtil.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/StartDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/ShopManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/BaseDialogManage.ts"
+  ]
+}

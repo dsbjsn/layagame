@@ -1,0 +1,5 @@
+<page>
+   <item name="scene/dialogView/GameOverDialog.scene" props="" ifExport="文件模式" aName=""/>
+   <item name="scene/game/game.scene" props="" ifExport="文件模式" aName=""/>
+   <item name="scene/dialogView/StartGameDialog.scene" props="" ifExport="文件模式" aName=""/>
+</page>

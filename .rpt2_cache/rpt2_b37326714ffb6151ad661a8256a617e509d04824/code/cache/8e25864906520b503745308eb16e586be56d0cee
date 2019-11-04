@@ -1,0 +1,6 @@
+{
+  "code": "import StaticData from \"../data/StaticData\";\r\nexport default class DialogBgRunTime extends Laya.Sprite {\r\n    onAwake() {\r\n        this.graphics.clear();\r\n        this.graphics.drawRect(0, 0, StaticData.gameWidth, StaticData.gameHeight, \"#000000\");\r\n        this.alpha = 0.8;\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/data/StaticData.ts"
+  ]
+}

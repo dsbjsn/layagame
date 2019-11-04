@@ -1,0 +1,6 @@
+{
+  "code": "import StaticData from \"../data/StaticData\";\r\nexport default class BaseScript extends Laya.Script {\r\n    onAwake() {\r\n        if (this.owner instanceof Laya.Dialog) {\r\n            this.owner.height = StaticData.gameHeight;\r\n        }\r\n        else {\r\n            this.owner.scene.height = StaticData.gameHeight;\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/data/StaticData.ts"
+  ]
+}

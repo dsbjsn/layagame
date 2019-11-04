@@ -1,0 +1,25 @@
+{
+  "code": "import LeadOutListRunTime from \"./runtimes/LeadOutListRunTime\";\r\nimport FLBoxDialogManage from \"./manages/dialogManage/FLBoxDialogManage\";\r\nimport FreeSkinOfStartDialogManage from \"./manages/dialogManage/FreeSkinOfStartDialogManage\";\r\nimport DialogBgRunTime from \"./runtimes/DialogBgRunTime\";\r\nimport AwardDialogManage from \"./manages/dialogManage/AwardDialogManage\";\r\nimport LeadOutGridRunTime from \"./runtimes/LeadOutGridRunTime\";\r\nimport GameFinishDialogManage from \"./manages/dialogManage/GameFinishDialogManage\";\r\nimport GameOverDialogManage from \"./manages/dialogManage/GameOverDialogManage\";\r\nimport ShopManage from \"./manages/dialogManage/ShopManage\";\r\nimport GetCoinTimtsDialogManage from \"./manages/dialogManage/GetCoinTimtsDialogManage\";\r\nimport MuneDialogManage from \"./manages/dialogManage/MuneDialogManage\";\r\nimport LeadOutGrid2RunTime from \"./runtimes/LeadOutGrid2RunTime\";\r\nimport OthersGameDialog from \"./manages/dialogManage/OthersGameDialog\";\r\nimport PauseDialogManage from \"./manages/dialogManage/PauseDialogManage\";\r\nimport RankDiaogManage from \"./manages/dialogManage/RankDiaogManage\";\r\nimport SignManage from \"./manages/dialogManage/SignManage\";\r\nimport SkinFreeDialogManage from \"./manages/dialogManage/SkinFreeDialogManage\";\r\nimport StartDialogManage from \"./manages/dialogManage/StartDialogManage\";\r\nimport GameManage from \"./manages/GameManage\";\r\nimport Loading from \"./manages/Loading\";\r\nexport default class GameConfig {\r\n    constructor() { }\r\n    static init() {\r\n        var reg = Laya.ClassUtils.regClass;\r\n        reg(\"runtimes/LeadOutListRunTime.ts\", LeadOutListRunTime);\r\n        reg(\"manages/dialogManage/FLBoxDialogManage.ts\", FLBoxDialogManage);\r\n        reg(\"manages/dialogManage/FreeSkinOfStartDialogManage.ts\", FreeSkinOfStartDialogManage);\r\n        reg(\"runtimes/DialogBgRunTime.ts\", DialogBgRunTime);\r\n        reg(\"manages/dialogManage/AwardDialogManage.ts\", AwardDialogManage);\r\n        reg(\"runtimes/LeadOutGridRunTime.ts\", LeadOutGridRunTime);\r\n        reg(\"manages/dialogManage/GameFinishDialogManage.ts\", GameFinishDialogManage);\r\n        reg(\"manages/dialogManage/GameOverDialogManage.ts\", GameOverDialogManage);\r\n        reg(\"manages/dialogManage/ShopManage.ts\", ShopManage);\r\n        reg(\"manages/dialogManage/GetCoinTimtsDialogManage.ts\", GetCoinTimtsDialogManage);\r\n        reg(\"manages/dialogManage/MuneDialogManage.ts\", MuneDialogManage);\r\n        reg(\"runtimes/LeadOutGrid2RunTime.ts\", LeadOutGrid2RunTime);\r\n        reg(\"manages/dialogManage/OthersGameDialog.ts\", OthersGameDialog);\r\n        reg(\"manages/dialogManage/PauseDialogManage.ts\", PauseDialogManage);\r\n        reg(\"manages/dialogManage/RankDiaogManage.ts\", RankDiaogManage);\r\n        reg(\"manages/dialogManage/SignManage.ts\", SignManage);\r\n        reg(\"manages/dialogManage/SkinFreeDialogManage.ts\", SkinFreeDialogManage);\r\n        reg(\"manages/dialogManage/StartDialogManage.ts\", StartDialogManage);\r\n        reg(\"manages/GameManage.ts\", GameManage);\r\n        reg(\"manages/Loading.ts\", Loading);\r\n    }\r\n}\r\nGameConfig.width = 750;\r\nGameConfig.height = 1334;\r\nGameConfig.scaleMode = \"fixedwidth\";\r\nGameConfig.screenMode = \"none\";\r\nGameConfig.alignV = \"top\";\r\nGameConfig.alignH = \"center\";\r\nGameConfig.startScene = \"scene/game/loading.scene\";\r\nGameConfig.sceneRoot = \"\";\r\nGameConfig.debug = false;\r\nGameConfig.stat = false;\r\nGameConfig.physicsDebug = false;\r\nGameConfig.exportSceneToJson = true;\r\nGameConfig.init();\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/runtimes/LeadOutListRunTime.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/FLBoxDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/FreeSkinOfStartDialogManage.ts",
+    "E:/LayaModle/melee/src/runtimes/DialogBgRunTime.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/AwardDialogManage.ts",
+    "E:/LayaModle/melee/src/runtimes/LeadOutGridRunTime.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/GameFinishDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/GameOverDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/ShopManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/GetCoinTimtsDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/MuneDialogManage.ts",
+    "E:/LayaModle/melee/src/runtimes/LeadOutGrid2RunTime.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/OthersGameDialog.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/PauseDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/RankDiaogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/SignManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/SkinFreeDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/dialogManage/StartDialogManage.ts",
+    "E:/LayaModle/melee/src/manages/GameManage.ts",
+    "E:/LayaModle/melee/src/manages/Loading.ts"
+  ]
+}

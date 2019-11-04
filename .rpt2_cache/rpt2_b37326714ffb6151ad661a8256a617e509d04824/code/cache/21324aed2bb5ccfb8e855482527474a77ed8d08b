@@ -1,0 +1,6 @@
+{
+  "code": "import SingtonClass from \"../utils/SingtonClass\";\r\nexport default class GameState extends SingtonClass {\r\n}\r\nGameState.NOT_START = 0;\r\nGameState.START = 1;\r\nGameState.PUASE = 2;\r\nGameState.FINISH = 3;\r\nGameState.OVER = 4;\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/utils/SingtonClass.ts"
+  ]
+}

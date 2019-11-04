@@ -1,0 +1,7 @@
+{
+  "code": "import GamePlatform from \"../adapter/GamePlatform\";\r\nimport StaticData from \"../data/StaticData\";\r\nexport default class ViewUtil {\r\n    static goneViews(views) {\r\n        if (views != null) {\r\n            for (let spr of views) {\r\n                if (spr != null) {\r\n                    spr.visible = false;\r\n                }\r\n            }\r\n        }\r\n    }\r\n    static visibleViews(views) {\r\n        if (views != null) {\r\n            for (let spr of views) {\r\n                if (spr != null) {\r\n                    spr.visible = true;\r\n                }\r\n            }\r\n        }\r\n    }\r\n    static adapterPositionJL(view) {\r\n        if (view != null\r\n            && (GamePlatform.platformName == GamePlatform.WX || GamePlatform.platformName == GamePlatform.QQ)\r\n            && (Laya.Browser.onWeiXin || Laya.Browser.onQQMiniGame)) {\r\n            let data = GamePlatform.platform.getMenuButtonBoundingClientRect();\r\n            let off = (data.height * StaticData.clientScale - view.height) / 2;\r\n            view.y = data.top * StaticData.clientScale + off;\r\n        }\r\n    }\r\n}\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/adapter/GamePlatform.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts"
+  ]
+}

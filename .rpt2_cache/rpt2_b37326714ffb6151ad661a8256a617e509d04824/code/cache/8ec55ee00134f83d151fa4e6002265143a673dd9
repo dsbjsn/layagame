@@ -1,0 +1,6 @@
+{
+  "code": "export default class DialogModle {\r\n    static addDialog(dialogTag) {\r\n        this.dialogList.push(dialogTag);\r\n    }\r\n    static popDialog() {\r\n        if (this.dialogList.length > 0) {\r\n            this.dialogList.pop();\r\n        }\r\n    }\r\n    static getDialogCount() {\r\n        return this.dialogList.length;\r\n    }\r\n}\r\nDialogModle.dialogList = [];\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/utils/SingtonClass.ts"
+  ]
+}

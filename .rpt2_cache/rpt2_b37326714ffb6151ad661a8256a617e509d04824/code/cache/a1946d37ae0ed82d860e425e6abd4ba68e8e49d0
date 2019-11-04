@@ -1,0 +1,14 @@
+{
+  "code": "import GameConfig from \"./GameConfig\";\r\nimport GamePlatform from \"./adapter/GamePlatform\";\r\nclass Main {\r\n    constructor() {\r\n        if (window[\"Laya3D\"])\r\n            Laya3D.init(GameConfig.width, GameConfig.height);\r\n        else\r\n            Laya.init(GameConfig.width, GameConfig.height, Laya[\"WebGL\"]);\r\n        Laya[\"Physics\"] && Laya[\"Physics\"].enable();\r\n        Laya[\"DebugPanel\"] && Laya[\"DebugPanel\"].enable();\r\n        Laya.stage.scaleMode = GameConfig.scaleMode;\r\n        Laya.stage.screenMode = GameConfig.screenMode;\r\n        Laya.URL.exportSceneToJson = GameConfig.exportSceneToJson;\r\n        if (GameConfig.debug || Laya.Utils.getQueryString(\"debug\") == \"true\")\r\n            Laya.enableDebugPanel();\r\n        if (GameConfig.physicsDebug && Laya[\"PhysicsDebugDraw\"])\r\n            Laya[\"PhysicsDebugDraw\"].enable();\r\n        if (GameConfig.stat)\r\n            Laya.Stat.show();\r\n        Laya.alertGlobalError = true;\r\n        GameConfig.startScene && Laya.Scene.open(GameConfig.startScene);\r\n    }\r\n}\r\nnew Main();\r\nGamePlatform.init();\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/GameConfig.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts",
+    "E:/LayaModle/melee/src/config/ConfigData.ts",
+    "E:/LayaModle/melee/src/data/GameHttp.ts",
+    "E:/LayaModle/melee/src/modle/SkinModle.ts",
+    "E:/LayaModle/melee/src/utils/LocalStorageUtil.ts",
+    "E:/LayaModle/melee/src/utils/SoundUtil.ts",
+    "E:/LayaModle/melee/src/modle/StartGameInitModle.ts",
+    "E:/LayaModle/melee/src/adapter/GamePlatform.ts"
+  ]
+}

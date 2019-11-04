@@ -1,0 +1,15 @@
+{
+  "code": "import BaseModle from \"./BaseModle\";\r\nimport GameHttp from \"../data/GameHttp\";\r\nimport LocalStorageUtil from \"../utils/LocalStorageUtil\";\r\nimport StaticData from \"../data/StaticData\";\r\nimport CoinModle from \"./CoinModle\";\r\nimport SignModle from \"./SignModle\";\r\nimport SkinModle from \"./SkinModle\";\r\nexport default class StartGameInitModle extends BaseModle {\r\n    static initData() {\r\n        GameHttp.Instance.login();\r\n        CoinModle.init();\r\n        SignModle.init();\r\n        let l = LocalStorageUtil.getNumber(StaticData.LEVEL);\r\n        if (l != null) {\r\n            StaticData.level = Number(l);\r\n        }\r\n        else {\r\n            LocalStorageUtil.add(StaticData.LEVEL, StaticData.level);\r\n        }\r\n        Laya.AtlasInfoManager.enable(\"fileconfig.json\", Laya.Handler.create(this, () => {\r\n            this.loadProgress++;\r\n            Laya.Scene.open(\"scene/game/game.scene\");\r\n        }));\r\n    }\r\n    static loadLevelJson() {\r\n        StaticData.levels = Laya.loader.getRes(\"level.json\");\r\n    }\r\n    static loadSkinJson() {\r\n        SkinModle.init(Laya.loader.getRes(\"skin.json\").carSkin, Laya.loader.getRes(\"skin.json\").eggSkin);\r\n    }\r\n}\r\nStartGameInitModle.loadProgress = 0;\r\nStartGameInitModle.jsons = [];\r\n",
+  "references": [
+    "E:/LayaModle/melee/src/modle/BaseModle.ts",
+    "E:/LayaModle/melee/src/data/GameHttp.ts",
+    "E:/LayaModle/melee/src/utils/LocalStorageUtil.ts",
+    "E:/LayaModle/melee/src/data/StaticData.ts",
+    "E:/LayaModle/melee/src/modle/CoinModle.ts",
+    "E:/LayaModle/melee/src/modle/SignModle.ts",
+    "E:/LayaModle/melee/src/modle/SkinModle.ts",
+    "E:/LayaModle/melee/src/data/UserData.ts",
+    "E:/LayaModle/melee/src/utils/WxADUtil.ts",
+    "E:/LayaModle/melee/src/utils/SoundUtil.ts"
+  ]
+}
